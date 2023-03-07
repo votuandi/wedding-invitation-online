@@ -1,19 +1,10 @@
 <template>
-  <div class="ten-dau-re flex flex-row content-center justify-center">
-    <p>{{ groom }}</p>
+  <div class="ten-dau-re flex flex-row items-center justify-center">
+    <p class="font-[normal] text-base lg:text-3xl">{{ groom }}</p>
     <i
-      class="
-        ti-heart
-        text-rose-400
-        box-border
-        leading-none
-        font-normal
-        text-2xl
-        iheart
-        mx-px
-      "
+      class="ti-heart text-rose-400 box-border leading-none font-normal text-base lg:text-2xl iheart mx-px"
     />
-    <p>{{ bride }}</p>
+    <p class="font-[normal] text-base lg:text-3xl">{{ bride }}</p>
   </div>
 </template>
 
@@ -34,12 +25,8 @@ export default {
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-.ten-dau-re {
-  font-family: "Dancing Script", cursive;
-}
 .ten-dau-re p {
-  font-weight: normal;
-  font-size: 30px;
+  font-family: "Dancing Script", cursive;
 }
 .ten-dau-re .iheart {
   margin: 0.52em 0.5rem 0.5em 0.5rem;

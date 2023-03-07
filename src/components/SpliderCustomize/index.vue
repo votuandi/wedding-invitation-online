@@ -5,10 +5,12 @@
         <img class="image-scale" :src="photoPath" alt="" />
       </splide-slide>
     </splide>
-    <div class="text-over-silde">
-      <div class="flex flex-col justify-center content-center">
+    <div
+      class="absolute flex h-[80vh] w-screen items-center justify-center z-[1] left-[0%] top-[0%]"
+    >
+      <div class="flex flex-col justify-center items-center">
         <CoupleName class="zoom" />
-        <span>{{ date }}</span>
+        <span class="text-over-silde">{{ date }}</span>
       </div>
     </div>
   </div>
@@ -55,27 +57,20 @@ export default {
 </script>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .image-scale {
   height: 80vh;
   width: 100vw;
   object-fit: cover;
 }
-.text-over-silde {
-  position: absolute;
-  display: flex;
-  height: 80vh;
-  width: 100vw;
-  top: 0%;
-  left: 0%;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
+
 .silder-customer {
   position: relative;
 }
 
-.text-over-silde span {
+.text-over-silde {
   color: #fff;
   text-shadow: 1.5px 1.5px 2px rgb(0 0 0 / 60%);
 }
@@ -86,6 +81,7 @@ export default {
 
 .zoom p,
 i {
+  font-weight: 800;
   color: #fff;
   text-shadow: 1.5px 1.5px 2px rgb(0 0 0 / 60%);
 }

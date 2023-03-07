@@ -1,19 +1,22 @@
 <template>
-  <div class="container">
+  <div
+    class="relative items-center flex h-full justify-center max-w-[600px] w-full shadow-[0_5px_20px_rgba(0,0,0,0.3)] mx-auto my-0 p-4 md:p-6 bg-white"
+  >
     <img
-      class="right-vec"
+      class="absolute w-[300px] h-[381px] bottom-[-50px] -right-20"
       src="@/assets/img/pattern/invitation-right-image.png"
-      alt=""
     />
-    <div class="calendar">
+    <div
+      class="calendar bg-[#fff3e015] rounded h-[540px] transition-[0.9s] w-full border-4 border-solid border-[#644d4d]"
+    >
       <div class="front">
-        <div class="current-date">
+        <div class="current-date px-[16px] py-[16px] md:px-[40px] md:py-[30px]">
           <h1>Save the Date</h1>
           <h1>29-30 April 2023</h1>
         </div>
 
         <div class="current-month">
-          <ul class="week-days">
+          <ul class="week-days py-[30px] px-[16px] md:px-[40px]">
             <li>Mon</li>
             <li>Tue</li>
             <li>Wed</li>
@@ -23,7 +26,7 @@
             <li>Sun</li>
           </ul>
 
-          <div class="weeks">
+          <div class="weeks py-0 px-[16px] md:px-[40px]">
             <div class="first">
               <span class="last-month">27</span>
               <span class="last-month">28</span>
@@ -107,6 +110,9 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Cookie&family=Dancing+Script&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .container {
   position: relative;
   padding: 1.5rem;
@@ -129,15 +135,6 @@ export default {
 }
 
 .calendar {
-  background-color: #fff3e015;
-  border-radius: 4px;
-  height: 540px;
-  perspective: 1000;
-  transition: 0.9s;
-  transform-style: preserve-3d;
-  width: 100%;
-  border: 0.25rem solid #644d4d;
-
   @media (max-width: 1000px) {
     width: 80vw;
   }
@@ -152,7 +149,6 @@ export default {
   border-bottom: 1px solid rgba(73, 114, 133, 0.6);
   display: flex;
   justify-content: space-between;
-  padding: 30px 40px;
 }
 
 .current-date h1 {
@@ -168,7 +164,6 @@ export default {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  padding: 10px 40px;
 }
 
 .days {
@@ -181,8 +176,8 @@ export default {
   font-family: "Comfortaa", cursive;
   color: #644d4d;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  padding: 0 40px;
 }
 
 .weeks div {
@@ -190,7 +185,6 @@ export default {
   font-size: 1.2em;
   font-weight: 300;
   justify-content: space-between;
-  width: 100%;
 }
 
 .last-month {
