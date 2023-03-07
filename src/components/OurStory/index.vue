@@ -61,12 +61,12 @@
         >
           <img
             v-if="animations[1]"
-            class="h-[280px] w-auto animate__animated animate__fadeInLeftBig"
+            class="w-[45vw] h-auto animate__animated animate__fadeInLeftBig"
             src="@/assets/img/story/pt-story-2vk.png"
           />
           <img
             v-if="animations[1]"
-            class="h-[280px] w-auto animate__animated animate__fadeInRightBig"
+            class="w-[45vw] h-auto animate__animated animate__fadeInRightBig"
             src="@/assets/img/story/pt-story-2ck.png"
           />
         </div>
@@ -90,12 +90,12 @@
         >
           <img
             v-if="animations[2]"
-            class="w-[220px] h-auto -z-10 animate__animated animate__fadeInLeftBig"
+            class="w-[45vw] h-auto -z-10 animate__animated animate__fadeInLeftBig"
             src="@/assets/img/story/pt-boy.png"
           />
           <img
             v-if="animations[2]"
-            class="w-[220px] h-auto -z-10 animate__animated animate__fadeInRightBig"
+            class="w-[45vw] h-auto -z-10 animate__animated animate__fadeInRightBig"
             src="@/assets/img/story/pt-girl.png"
           />
         </div>
