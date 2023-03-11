@@ -125,7 +125,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_3"
       >
         <div
@@ -145,7 +145,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_4"
       >
         <div
@@ -168,7 +168,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-sceen w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_5"
       >
         <div
@@ -204,7 +204,7 @@
         </div>
       </div>
       <div
-        class="img-children relative justify-center h-sceen w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_6"
       >
         <div
@@ -283,7 +283,7 @@
           <p class="text-base font-light mt-1">
             Tháng 5/2021,<br />
             Chúng mình có tham dự tiệc cưới của một người bạn. Và...<br />
-            Nàng đã bắt được hoa cưới và trao cho chàng ^^
+            Nàng đã bắt được hoa cưới và trao cho chàng ❤️
           </p>
         </div>
         <video
