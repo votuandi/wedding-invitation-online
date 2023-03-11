@@ -23,9 +23,7 @@ import CoupleName from "@/components/CoupleName";
 export default {
   name: "SpliderCustomize",
   components: { Splide, SplideSlide, CoupleName },
-  beforeMount() {
-    console.log(this.photoNames);
-  },
+  beforeMount() {},
   data() {
     return {
       date: "___    30 April 2023    ___",

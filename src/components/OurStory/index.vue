@@ -76,7 +76,7 @@
         v-if="animations[1]"
       >
         <p class="font-light text-center text-lg">
-          Mọi thứ bắt đầu từ 1 tin nhắn đầu năm 2015. <br />
+          Mọi thứ bắt đầu từ tin nhắn năm 2015. <br />
           Tuy chưa gặp mặt lần nào, nhưng 2 đứa vẫn giữ liên lạc suốt 7 năm
         </p>
       </div>
@@ -120,8 +120,180 @@
       >
         <p class="font-light text-center text-lg">
           2 đứa gặp nhau lần đầu vào ngày 8/9/2019<br />
-          Món ăn đầu tiên cùng nhau là Bún bò
+          Món ăn đầu tiên cùng nhau là Bún bò. Và sau đó...
         </p>
+      </div>
+
+      <div
+        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_3"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse"
+          v-if="animations[3]"
+        >
+          <p class="font-bold text-3xl text-rose-300">Ngày 10/03/2020,</p>
+          <p class="text-base font-light mt-1">
+            Chúng tôi bắt đầu yêu nhau tại thành phố biển Vũng Tàu
+          </p>
+        </div>
+        <img
+          class="w-[320px] h-auto self-center animate__animated animate__fadeInDown"
+          v-if="animations[3]"
+          src="@/assets/img/story/st-10-03-2020.png"
+        />
+      </div>
+
+      <div
+        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_4"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse"
+          v-if="animations[4]"
+        >
+          <p class="font-bold text-3xl text-rose-300">Tháng 10/2020,</p>
+          <p class="text-base font-light mt-1">
+            Hai đứa lần đầu khởi nghiệp, cùng nhau nhập hàng, lên kế hoạch,
+            thiết kế banner, chốt đơn,...<br />
+            Nhớ nhất những tối cùng nhau vi vu khắp các quận Sài Gòn để giao
+            từng đơn hàng ^^
+          </p>
+        </div>
+        <img
+          class="w-[320px] h-auto self-center animate__animated animate__fadeInDown"
+          v-if="animations[4]"
+          src="@/assets/img/story/st-10-2020.png"
+        />
+      </div>
+
+      <div
+        class="img-children relative justify-center h-sceen w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_5"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse"
+          v-if="animations[5]"
+        >
+          <p class="font-bold text-3xl text-rose-300">Năm 2021,</p>
+          <p class="text-base font-light mt-1">
+            Đại dịch bùng phát, cả 2 ở nhà WFH, cùng nhau xếp hàng xin cứu trợ,
+            cùng nhâu nấu ăn, chơi với mèo, rồi hóng hớt chờ được chích vac-xin
+          </p>
+        </div>
+        <div
+          class="flex flex-row flex-wrap self-center justify-center animate__animated animate__fadeInDown"
+          v-if="animations[5]"
+        >
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2021.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2021-1.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2021-2.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2021-3.png"
+          />
+        </div>
+      </div>
+      <div
+        class="img-children relative justify-center h-sceen w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_6"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse"
+          v-if="animations[6]"
+        >
+          <p class="font-bold text-3xl text-rose-300">Năm 2022,</p>
+          <p class="text-base font-light mt-1">
+            Thử thách lớn nhất trong hành trình của chúng tôi. Khoảng cách của 2
+            đứa giờ là 500km với rất nhiều biến cố. <br />
+            Chỉ có thể là sức mạnh của tình yêu, để có thể 5 lần 7 lượt đến thăm
+            em và duy trì sợ tơ hồng đang rất mỏng manh.
+          </p>
+        </div>
+        <div
+          class="flex flex-row flex-wrap self-center justify-center animate__animated animate__fadeInDown"
+          v-if="animations[6]"
+        >
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2022.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2022-1.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2022-2.png"
+          />
+          <img
+            class="h-[180px] w-auto self-center m-1"
+            src="@/assets/img/story/st-2022-3.png"
+          />
+        </div>
+      </div>
+
+      <div
+        class="cau-hon img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_7"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse mb-[20px]"
+          v-if="animations[7]"
+        >
+          <p class="font-bold text-3xl text-rose-300">Ngày 13/06/2022,</p>
+          <p class="text-base font-light mt-1">
+            Sau gần 3 năm bên nhau, cùng nhau đi đến rất nhiều nơi, cùng nhau
+            nấu và ăn rất nhiều món, trải qua những thử thách mà anh nghĩ là đã
+            "quá đủ" rồi.<br />
+            Anh đã sợ lắm khi phải xa và mất em, từ giờ mình về chung một nhà em
+            nhé! <br />
+            Anh đã setup buổi cầu hôn suốt cả buổi chiều. Nhờ sự giúp đỡ của các
+            chú mèo ở CATFE,<br />
+            Anh cầu hôn và em đã gật đầu đồng ý.
+          </p>
+        </div>
+        <img
+          class="w-[80vw] h-auto self-center animate__animated animate__fadeInDown"
+          v-if="animations[7]"
+          src="@/assets/img/story/st-06-2022.png"
+        />
+      </div>
+
+      <div
+        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        ref="story_8"
+      >
+        <div
+          class="self-start p-6 animate__animated animate__pulse"
+          v-if="animations[8]"
+        >
+          <p class="font-bold text-3xl text-rose-300">
+            Bật mí chuyện "Xin vía"
+          </p>
+          <p class="text-base font-light mt-1">
+            Tháng 5/2021,<br />
+            Chúng mình có tham dự tiệc cưới của một người bạn. Và...<br />
+            Nàng đã bắt được hoa cưới và trao cho chàng ^^
+          </p>
+        </div>
+        <video
+          ref="video_vx_ref"
+          id="video-vx"
+          controls="true"
+          class="w-[320px] md:w-[640px] lg:w-[720px] h-auto self-center animate__animated animate__fadeInDown"
+          v-if="animations[8]"
+          src="@/assets/videos/bat-hoa.mp4"
+        />
       </div>
     </div>
   </div>
@@ -133,16 +305,25 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.updateScaroll);
   },
+
   data() {
     return {
       lastScrollY: 0,
-      animations: [false, false, false],
+      animations: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
     };
   },
   methods: {
     updateScaroll() {
-      console.log("---------");
-      console.log(window.innerHeight);
       const scrollPosition = window.scrollY;
       if (
         this.$refs.story_0.getBoundingClientRect().top +
@@ -163,10 +344,6 @@ export default {
           window.innerHeight &&
         scrollPosition - this.lastScrollY > 0
       ) {
-        console.log(
-          this.$refs.story_1.getBoundingClientRect().top +
-            this.$refs.story_1.getBoundingClientRect().height
-        );
         this.animations[1] = true;
       } else if (
         this.$refs.story_1.getBoundingClientRect().top > window.innerHeight
@@ -180,15 +357,89 @@ export default {
           window.innerHeight &&
         scrollPosition - this.lastScrollY > 0
       ) {
-        console.log(
-          this.$refs.story_2.getBoundingClientRect().top +
-            this.$refs.story_2.getBoundingClientRect().height
-        );
         this.animations[2] = true;
       } else if (
         this.$refs.story_2.getBoundingClientRect().top > window.innerHeight
       ) {
         this.animations[2] = false;
+      }
+
+      if (
+        this.$refs.story_3.getBoundingClientRect().top +
+          this.$refs.story_3.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[3] = true;
+      } else if (
+        this.$refs.story_3.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[3] = false;
+      }
+
+      if (
+        this.$refs.story_4.getBoundingClientRect().top +
+          this.$refs.story_4.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[4] = true;
+      } else if (
+        this.$refs.story_4.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[4] = false;
+      }
+
+      if (
+        this.$refs.story_5.getBoundingClientRect().top +
+          this.$refs.story_5.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[5] = true;
+      } else if (
+        this.$refs.story_5.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[5] = false;
+      }
+
+      if (
+        this.$refs.story_6.getBoundingClientRect().top +
+          this.$refs.story_6.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[6] = true;
+      } else if (
+        this.$refs.story_6.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[6] = false;
+      }
+
+      if (
+        this.$refs.story_7.getBoundingClientRect().top +
+          this.$refs.story_7.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[7] = true;
+      } else if (
+        this.$refs.story_7.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[7] = false;
+      }
+
+      if (
+        this.$refs.story_8.getBoundingClientRect().top +
+          this.$refs.story_8.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[8] = true;
+      } else if (
+        this.$refs.story_8.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[8] = false;
       }
     },
   },
@@ -203,5 +454,9 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .story-intro {
   font-family: "Dancing Script", cursive;
+}
+
+.cau-hon {
+  background-image: url("@/assets/img/story/bg-cauhon.png");
 }
 </style>
