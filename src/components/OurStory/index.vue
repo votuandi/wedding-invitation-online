@@ -82,7 +82,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[600px] w-screen md:w-[600px] items-end pb-5 self-center"
+        class="img-children relative justify-center h-[600px] py-2 w-screen md:w-[600px] items-end pb-5 self-center"
         ref="story_2"
       >
         <div
@@ -125,7 +125,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_3"
       >
         <div
@@ -145,7 +145,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_4"
       >
         <div
@@ -168,7 +168,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_5"
       >
         <div
@@ -204,7 +204,7 @@
         </div>
       </div>
       <div
-        class="img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_6"
       >
         <div
@@ -243,7 +243,7 @@
       </div>
 
       <div
-        class="cau-hon img-children relative justify-center h-[100vh] w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="cau-hon img-children relative justify-center h-[100vh] py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_7"
       >
         <div
@@ -270,7 +270,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-scren w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
+        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_8"
       >
         <div
