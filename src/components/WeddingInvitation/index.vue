@@ -5,6 +5,7 @@
     <SpliderCustomer />
     <SaveTheDay />
     <OurStory />
+    <WeddingEvent />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import NavigationBar from "@/components/NavigationBar";
 import SpliderCustomer from "@/components/SpliderCustomize";
 import SaveTheDay from "@/components/SaveTheDay";
 import OurStory from "@/components/OurStory";
+import WeddingEvent from "@/components/WeddingEvent";
 export default {
   name: "WeddingInvitation",
   components: {
@@ -22,6 +24,7 @@ export default {
     SpliderCustomer,
     SaveTheDay,
     OurStory,
+    WeddingEvent,
   },
 };
 </script>
