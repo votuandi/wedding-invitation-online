@@ -20,12 +20,12 @@
       />
       <div class="w-full flex flex-col text-center my-4">
         <p class="event-time font-medium text-4xl mb-5 text-rose-600">
-          Lễ cưới nhà nữ
+          Lễ cưới nhà gái
         </p>
         <p class="event-invite font-semibold text-lg mb-[2px] text-gray-700">
           8 giờ 00 ngày 29-30/04/2023
         </p>
-        <p class="event-invite text-lg font-extralight">Tư gia nhà nữ</p>
+        <p class="event-invite text-lg font-extralight">Tư gia nhà gái</p>
       </div>
       <div class="w-full flex flex-col text-center justify-center items-center">
         <button
@@ -35,6 +35,7 @@
         </button>
         <button
           class="bg-rose-500 w-[200px] hover:bg-rose-700 text-white font-bold py-3 px-4 border border-rose-700 rounded mt-2"
+          @click="openMapBride()"
         >
           Xem bản đồ
         </button>
@@ -65,6 +66,7 @@
         </button>
         <button
           class="bg-rose-500 w-[200px] hover:bg-rose-700 text-white font-bold py-3 px-4 border border-rose-700 rounded mt-2"
+          @click="openMapBride()"
         >
           Xem bản đồ
         </button>
@@ -95,6 +97,7 @@
         </button>
         <button
           class="bg-rose-500 w-[200px] hover:bg-rose-700 text-white font-bold py-3 px-4 border border-rose-700 rounded mt-2"
+          @click="openMapGroom()"
         >
           Xem bản đồ
         </button>
@@ -115,7 +118,7 @@
         <p class="event-invite font-semibold text-lg mb-[2px] text-gray-700">
           10 giờ 00 ngày 29/04/2023
         </p>
-        <p class="event-invite text-lg font-extralight">Tư gia nhà nữ</p>
+        <p class="event-invite text-lg font-extralight">Tư gia nhà trai</p>
       </div>
       <div class="w-full flex flex-col text-center justify-center items-center">
         <button
@@ -125,6 +128,7 @@
         </button>
         <button
           class="bg-rose-500 w-[200px] hover:bg-rose-700 text-white font-bold py-3 px-4 border border-rose-700 rounded mt-2"
+          @click="openMapGroom()"
         >
           Xem bản đồ
         </button>
@@ -136,6 +140,14 @@
 <script>
 export default {
   name: "WeddingEvent",
+  methods: {
+    openMapBride() {
+      window.open("https://goo.gl/maps/tgRRuybtL4fR58rU9", "_blank");
+    },
+    openMapGroom() {
+      window.open("https://goo.gl/maps/HDp2wRy3H6Rg1MVb8", "_blank");
+    },
+  },
 };
 </script>
 

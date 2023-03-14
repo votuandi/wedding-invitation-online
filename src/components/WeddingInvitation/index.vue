@@ -6,6 +6,7 @@
     <SaveTheDay />
     <OurStory />
     <WeddingEvent />
+    <OurAlbum />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import SpliderCustomer from "@/components/SpliderCustomize";
 import SaveTheDay from "@/components/SaveTheDay";
 import OurStory from "@/components/OurStory";
 import WeddingEvent from "@/components/WeddingEvent";
+import OurAlbum from "@/components/OurAlbum";
 export default {
   name: "WeddingInvitation",
   components: {
@@ -25,6 +27,7 @@ export default {
     SaveTheDay,
     OurStory,
     WeddingEvent,
+    OurAlbum,
   },
 };
 </script>
