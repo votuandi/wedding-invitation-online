@@ -1,35 +1,46 @@
 <template>
   <div class="navbar">
     <div class="h-px w-screen bg-slate-100"></div>
-    <div class="bg" v-show="mobileNav" @click="onHideNavMobile()"></div>
+    <div class="navibg" v-show="mobileNav" @click="onHideNavMobile()"></div>
     <header :class="{ 'scrolled-nav': scrollNav }">
       <nav>
         <ul v-show="!mobile" class="navigation">
-          <li>
-            <router-link class="nav-link" :to="{ name: 'Home' }"
-              >Cặp đôi</router-link
-            >
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 0)"
+          >
+            <span>Trang chủ</span>
           </li>
           <!-- <li @mouseover="showProductsMenu" @mouseleave="hideProductsMenu"> -->
-          <li>
-            <router-link class="nav-link" :to="{ name: 'Products' }"
-              >Chuyện tình yêu</router-link
-            >
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 1)"
+          >
+            <span>Ngày cưới</span>
           </li>
-          <li>
-            <router-link class="nav-link" :to="{ name: 'Services' }"
-              >Album cưới</router-link
-            >
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 2)"
+          >
+            <span>Cô dâu Chú rể</span>
           </li>
-          <li>
-            <router-link class="nav-link" :to="{ name: 'Blogs' }"
-              >Lời chúc</router-link
-            >
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 3)"
+          >
+            <span>Sự kiện cưới</span>
           </li>
-          <li>
-            <router-link class="nav-link" :to="{ name: 'ContactUs' }"
-              >Mừng cưới</router-link
-            >
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 4)"
+          >
+            <span>Album cưới</span>
+          </li>
+          <li
+            class="text-[#b58887] w-full cursor-pointer"
+            @click="$emit('rollTo', 5)"
+          >
+            <span>Xác nhận tham dự</span>
           </li>
         </ul>
         <div class="icon">
@@ -40,32 +51,25 @@
             :class="{ 'icon-active': mobileNav }"
           />
         </div>
-        <transition name="mobile-nav">
+        <transition>
           <ul v-show="mobileNav" class="dropdown-nav">
-            <li>
-              <router-link class="nav-link" :to="{ name: 'Home' }"
-                >Cặp đôi</router-link
-              >
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 0)">
+              <span>Trang chủ</span>
             </li>
-            <li>
-              <router-link class="nav-link" :to="{ name: 'Products' }"
-                >Chuyện tình yêu</router-link
-              >
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 1)">
+              <span>Ngày cưới</span>
             </li>
-            <li>
-              <router-link class="nav-link" :to="{ name: 'Services' }"
-                >Album cưới</router-link
-              >
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 2)">
+              <span>Cô dâu Chú rể</span>
             </li>
-            <li>
-              <router-link class="nav-link" :to="{ name: 'Blogs' }"
-                >Lời chúc</router-link
-              >
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 3)">
+              <span>Sự kiện cưới</span>
             </li>
-            <li>
-              <router-link class="nav-link" :to="{ name: 'ContactUs' }"
-                >Mừng cưới</router-link
-              >
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 4)">
+              <span>Album cưới</span>
+            </li>
+            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 5)">
+              <span>Xác nhận tham dự</span>
             </li>
           </ul>
         </transition>
@@ -154,6 +158,15 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 .navbar {
   font-family: "Itim", cursive;
+}
+.navbar .navibg {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
 }
 .navbar header {
   background-color: rgba(255, 255, 255, 0.8);

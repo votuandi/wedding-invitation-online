@@ -29,10 +29,11 @@
               có thêm một niềm hạnh phúc!</span
             >
             <button
-              class="bg-[#b38888] flex flex-row items-center justify-center w-40 h-12"
+              class="bg-[#b38888] flex flex-row items-center justify-center min-w-40 h-12 px-3"
+              @click="$emit('rollTo')"
             >
               <span class="text-white mr-2 text-base font-bold"
-                >Gửi lời chúc</span
+                >Xác nhận tham dự</span
               >
               <img
                 class="w-5 h-5 btn-white"

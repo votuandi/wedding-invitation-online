@@ -1,11 +1,30 @@
 <template>
-  <div class="w-screen h-fit px-2 py-5 bg-white">
-    <img
+  <div
+    class="album w-screen h-fit px-2 py-5 bg-yellow-50 rounded-t-2xl -mt-3 flex flex-col items-center"
+  >
+    <div>
+      <div class="flex flex-col items-center justify-start px-10 mb-10">
+        <img
+          class="w-[126px]"
+          src="@/assets/img/pattern/sec-title-flower.png"
+        />
+        <p class="story-intro text-[24px] font-semibold">Album cưới</p>
+        <span class="font-light text-center text-base text-cf"
+          >Mời cả nhà nhìn ngắm cô dâu và chú rể trước lễ cưới qua Album
+          Pre-Wedding của chúng mình nhé!</span
+        >
+      </div>
+    </div>
+    <div
+      class="rounded-xl w-fit bg-white p-3 mb-2 shadow-lg self-center"
       v-for="(filename, ind) in imageFilenames"
-      :src="getFilePath(filename)"
       :key="ind"
-      class="w-full mb-2"
-    />
+    >
+      <img
+        :src="getFilePath(filename)"
+        class="w-full md:w-auto md:h-[80vh] rounded-xl"
+      />
+    </div>
   </div>
 </template>
 
@@ -117,5 +136,12 @@ export default {
 
 .swiper-slide:nth-child(1n) {
   background-color: white;
+}
+.album {
+  box-shadow: 0px 10px 5px #88888833, 0px -5px 5px #88888833;
+}
+
+.text-cf {
+  font-family: "Comfortaa", cursive;
 }
 </style>

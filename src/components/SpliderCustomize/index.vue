@@ -1,12 +1,16 @@
 <template>
   <div class="relative">
-    <splide class="splider bg-yellow-500" :options="options">
+    <splide class="splider" :options="options">
       <splide-slide v-for="(photoPath, ind) in getListPhotoPaths()" :key="ind">
-        <img class="image-scale" :src="photoPath" alt="" />
+        <img
+          class="image-scale h-[100vh] w-auto md:w-[100vw] md:h-auto"
+          :src="photoPath"
+          alt=""
+        />
       </splide-slide>
     </splide>
     <div
-      class="absolute flex h-[80vh] w-screen items-center justify-center z-[1] left-[0%] top-[0%]"
+      class="absolute flex h-[100vh] w-screen items-center justify-center z-[1] left-[0%] top-[0%]"
     >
       <div class="flex flex-col justify-center items-center">
         <CoupleName class="zoom" />
@@ -27,7 +31,8 @@ export default {
   data() {
     return {
       date: "___    30 April 2023    ___",
-      photoNames: ["IMG388.jpg", "IMG532.jpg", "IMG890.jpg"],
+      photoNames: ["IMG211.jpg", "IMG388.jpg", "IMG532.jpg", "IMG890.jpg"],
+      photoNamesMb: ["mb65.jpg", "mb926.jpg", "mb409.jpg", "mb730.jpg"],
       options: {
         rewind: true,
         width: "100vw",
@@ -44,8 +49,11 @@ export default {
   methods: {
     getListPhotoPaths() {
       let listPath = [];
-      this.photoNames.forEach((photoName) => {
+      let ptNames =
+        window.innerWidth < 600 ? this.photoNamesMb : this.photoNames;
+      ptNames.forEach((photoName) => {
         let path = require(`@/assets/img/top-splide-photos/${photoName}`);
+
         listPath.push(path);
       });
       return listPath;
@@ -59,8 +67,6 @@ export default {
 @tailwind components;
 @tailwind utilities;
 .image-scale {
-  height: 80vh;
-  width: 100vw;
   object-fit: cover;
 }
 

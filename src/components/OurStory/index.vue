@@ -1,14 +1,12 @@
 <template>
-  \
-  <div class="flex flex-col w-full py-10 items-center">
+  <div class="flex flex-col w-full pt-10 items-center">
     <div class="flex flex-col items-center justify-start px-10 mb-10">
       <img class="w-[126px]" src="@/assets/img/pattern/sec-title-flower.png" />
       <p class="story-intro text-[24px] font-semibold">
         Câu chuyện tình yêu của chúng tôi
       </p>
       <span class="font-light text-center text-lg"
-        >Tình yêu là điều kiện trong đó hạnh phúc của người kia là điều cần
-        thiết cho chính bạn.</span
+        >Đây là cô dâu và chú rể...</span
       >
     </div>
     <div>
@@ -53,20 +51,20 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[320px] w-screen md:w-[600px] items-end pb-5 self-center"
+        class="img-children relative justify-center h-[380px] md:h-[720px] w-screen md:w-[600px] items-end pb-5 self-center"
         ref="story_1"
       >
         <div
-          class="flex flex-row absolute w-screen md:w-[600px] justify-between px-3"
+          class="flex flex-row absolute w-screen md:w-[600px] justify-evenly px-3"
         >
           <img
             v-if="animations[1]"
-            class="w-[45vw] h-auto animate__animated animate__fadeInLeftBig"
+            class="w-[40vw] md:w-[300px] h-auto animate__animated animate__fadeInLeftBig"
             src="@/assets/img/story/pt-story-2vk.png"
           />
           <img
             v-if="animations[1]"
-            class="w-[45vw] h-auto animate__animated animate__fadeInRightBig"
+            class="w-[40vw] md:w-[300px] h-auto animate__animated animate__fadeInRightBig"
             src="@/assets/img/story/pt-story-2ck.png"
           />
         </div>
@@ -82,7 +80,7 @@
       </div>
 
       <div
-        class="img-children relative justify-center h-[600px] py-2 w-screen md:w-[600px] items-end pb-5 self-center"
+        class="img-children relative justify-center h-[500px] md:h-[640px] py-2 w-screen md:w-[600px] items-end pb-5 self-center"
         ref="story_2"
       >
         <div
@@ -90,12 +88,12 @@
         >
           <img
             v-if="animations[2]"
-            class="w-[45vw] h-auto -z-10 animate__animated animate__fadeInLeftBig"
+            class="w-[150px] md:w-[300px] h-auto -z-10 animate__animated animate__fadeInLeftBig"
             src="@/assets/img/story/pt-boy.png"
           />
           <img
             v-if="animations[2]"
-            class="w-[45vw] h-auto -z-10 animate__animated animate__fadeInRightBig"
+            class="w-[150px] md:w-[300px] h-auto -z-10 animate__animated animate__fadeInRightBig"
             src="@/assets/img/story/pt-girl.png"
           />
         </div>
@@ -144,7 +142,7 @@
         />
       </div>
 
-      <div
+      <!-- <div
         class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_4"
       >
@@ -240,15 +238,15 @@
             src="@/assets/img/story/st-2022-3.png"
           />
         </div>
-      </div>
+      </div> -->
 
       <div
         class="cau-hon img-children relative justify-center h-[100vh] py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
-        ref="story_7"
+        ref="story_4"
       >
         <div
           class="self-start p-6 animate__animated animate__pulse mb-[20px]"
-          v-if="animations[7]"
+          v-if="animations[4]"
         >
           <p class="font-bold text-3xl text-rose-300">Ngày 13/06/2022,</p>
           <p class="text-base font-light mt-1">
@@ -264,35 +262,8 @@
         </div>
         <img
           class="w-[80vw] h-auto self-center animate__animated animate__fadeInDown"
-          v-if="animations[7]"
+          v-if="animations[4]"
           src="@/assets/img/story/st-06-2022.png"
-        />
-      </div>
-
-      <div
-        class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
-        ref="story_8"
-      >
-        <div
-          class="self-start p-6 animate__animated animate__pulse"
-          v-if="animations[8]"
-        >
-          <p class="font-bold text-3xl text-rose-300">
-            Bật mí chuyện "Xin vía"
-          </p>
-          <p class="text-base font-light mt-1">
-            Tháng 5/2021,<br />
-            Chúng mình có tham dự tiệc cưới của một người bạn. Và...<br />
-            Nàng đã bắt được hoa cưới và trao cho chàng ❤️
-          </p>
-        </div>
-        <video
-          ref="video_vx_ref"
-          id="video-vx"
-          controls="true"
-          class="w-[320px] md:w-[640px] lg:w-[720px] h-auto self-center animate__animated animate__fadeInDown"
-          v-if="animations[8]"
-          src="@/assets/videos/bat-hoa.mp4"
         />
       </div>
     </div>
@@ -390,57 +361,57 @@ export default {
         this.animations[4] = false;
       }
 
-      if (
-        this.$refs.story_5.getBoundingClientRect().top +
-          this.$refs.story_5.getBoundingClientRect().height <
-          window.innerHeight &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[5] = true;
-      } else if (
-        this.$refs.story_5.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[5] = false;
-      }
+      // if (
+      //   this.$refs.story_5.getBoundingClientRect().top +
+      //     this.$refs.story_5.getBoundingClientRect().height <
+      //     window.innerHeight &&
+      //   scrollPosition - this.lastScrollY > 0
+      // ) {
+      //   this.animations[5] = true;
+      // } else if (
+      //   this.$refs.story_5.getBoundingClientRect().top > window.innerHeight
+      // ) {
+      //   this.animations[5] = false;
+      // }
 
-      if (
-        this.$refs.story_6.getBoundingClientRect().top +
-          this.$refs.story_6.getBoundingClientRect().height <
-          window.innerHeight &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[6] = true;
-      } else if (
-        this.$refs.story_6.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[6] = false;
-      }
+      // if (
+      //   this.$refs.story_6.getBoundingClientRect().top +
+      //     this.$refs.story_6.getBoundingClientRect().height <
+      //     window.innerHeight &&
+      //   scrollPosition - this.lastScrollY > 0
+      // ) {
+      //   this.animations[6] = true;
+      // } else if (
+      //   this.$refs.story_6.getBoundingClientRect().top > window.innerHeight
+      // ) {
+      //   this.animations[6] = false;
+      // }
 
-      if (
-        this.$refs.story_7.getBoundingClientRect().top +
-          this.$refs.story_7.getBoundingClientRect().height <
-          window.innerHeight &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[7] = true;
-      } else if (
-        this.$refs.story_7.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[7] = false;
-      }
+      // if (
+      //   this.$refs.story_7.getBoundingClientRect().top +
+      //     this.$refs.story_7.getBoundingClientRect().height <
+      //     window.innerHeight &&
+      //   scrollPosition - this.lastScrollY > 0
+      // ) {
+      //   this.animations[7] = true;
+      // } else if (
+      //   this.$refs.story_7.getBoundingClientRect().top > window.innerHeight
+      // ) {
+      //   this.animations[7] = false;
+      // }
 
-      if (
-        this.$refs.story_8.getBoundingClientRect().top +
-          this.$refs.story_8.getBoundingClientRect().height <
-          window.innerHeight &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[8] = true;
-      } else if (
-        this.$refs.story_8.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[8] = false;
-      }
+      // if (
+      //   this.$refs.story_8.getBoundingClientRect().top +
+      //     this.$refs.story_8.getBoundingClientRect().height <
+      //     window.innerHeight &&
+      //   scrollPosition - this.lastScrollY > 0
+      // ) {
+      //   this.animations[8] = true;
+      // } else if (
+      //   this.$refs.story_8.getBoundingClientRect().top > window.innerHeight
+      // ) {
+      //   this.animations[8] = false;
+      // }
     },
   },
 };

@@ -25,7 +25,7 @@ export default {
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script&display=swap");
 .main-title {
-  height: 140px;
+  height: fit-content;
 }
 .main-title span {
   font-family: "Comfortaa", cursive;

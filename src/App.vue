@@ -4,7 +4,6 @@
 
 <script>
 import WeddingInvitation from "@/components/WeddingInvitation";
-
 export default {
   name: "App",
   components: {
