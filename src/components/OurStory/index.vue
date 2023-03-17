@@ -74,7 +74,7 @@
         v-if="animations[1]"
       >
         <p class="font-light text-center text-lg">
-          Mọi thứ bắt đầu từ tin nhắn năm 2015. <br />
+          Mọi thứ bắt đầu từ sau khi kết bạn Facebook năm 2012. <br />
           Từ đó, cả 2 vẫn giữ liên lạc suốt 7 năm dù chưa hề gặp mặt.
         </p>
       </div>
