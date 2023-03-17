@@ -297,9 +297,8 @@ export default {
     updateScaroll() {
       const scrollPosition = window.scrollY;
       if (
-        this.$refs.story_0.getBoundingClientRect().top +
-          this.$refs.story_0.getBoundingClientRect().height <
-          window.innerHeight/2 &&
+        this.$refs.story_0.getBoundingClientRect().top  <
+          window.innerHeight*0.75 &&
         scrollPosition - this.lastScrollY > 0
       ) {
         this.animations[0] = true;
@@ -310,9 +309,8 @@ export default {
       }
 
       if (
-        this.$refs.story_1.getBoundingClientRect().top +
-          this.$refs.story_1.getBoundingClientRect().height <
-          window.innerHeight/2 &&
+        this.$refs.story_1.getBoundingClientRect().top <
+          window.innerHeight*0.75 &&
         scrollPosition - this.lastScrollY > 0
       ) {
         this.animations[1] = true;
@@ -323,9 +321,8 @@ export default {
       }
 
       if (
-        this.$refs.story_2.getBoundingClientRect().top +
-          this.$refs.story_2.getBoundingClientRect().height <
-          window.innerHeight/2 &&
+        this.$refs.story_2.getBoundingClientRect().top <
+          window.innerHeight*0.75 &&
         scrollPosition - this.lastScrollY > 0
       ) {
         this.animations[2] = true;
@@ -336,9 +333,8 @@ export default {
       }
 
       if (
-        this.$refs.story_3.getBoundingClientRect().top +
-          this.$refs.story_3.getBoundingClientRect().height <
-          window.innerHeight/2 &&
+        this.$refs.story_3.getBoundingClientRect().top <
+          window.innerHeight*0.75 &&
         scrollPosition - this.lastScrollY > 0
       ) {
         this.animations[3] = true;
@@ -349,9 +345,8 @@ export default {
       }
 
       if (
-        this.$refs.story_4.getBoundingClientRect().top +
-          this.$refs.story_4.getBoundingClientRect().height <
-          window.innerHeight/2 &&
+        this.$refs.story_4.getBoundingClientRect().top <
+          window.innerHeight*0.75 &&
         scrollPosition - this.lastScrollY > 0
       ) {
         this.animations[4] = true;
