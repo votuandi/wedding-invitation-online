@@ -6,7 +6,7 @@
       <p class="event-title text-[48px]">Lễ cưới</p>
       <p class="event-invite text-base font-light mt-1 text-gray-500 mb-6">
         Được sự cho phép của hai gia đình,<br />
-        Lễ cưới của (con em) chúng tôi sẽ được tổ chức theo cách móc thời gian
+        Lễ cưới của (con em) chúng tôi sẽ được tổ chức theo các mốc thời gian
         sau.<br />
         Kính mời quý quan khách đến chung vui cùng gia đình chúng tôi.
       </p>
