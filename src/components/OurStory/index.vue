@@ -75,7 +75,7 @@
       >
         <p class="font-light text-center text-lg">
           Mọi thứ bắt đầu từ tin nhắn năm 2015. <br />
-          Tuy chưa gặp mặt lần nào, nhưng 2 đứa vẫn giữ liên lạc suốt 7 năm
+          Từ đó, cả 2 vẫn giữ liên lạc suốt 7 năm dù chưa hề gặp mặt.
         </p>
       </div>
 
