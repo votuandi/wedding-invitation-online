@@ -9,6 +9,9 @@ export default {
   components: {
     WeddingInvitation,
   },
+  mounted() {
+    document.title = "Tuấn Dĩ ❤️ Tuyết Minh";
+  },
 };
 </script>
 
