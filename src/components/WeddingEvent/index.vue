@@ -129,7 +129,7 @@
             Tiệc rượu nhà trai
           </p>
           <p class="event-invite font-semibold text-lg mb-[2px] text-gray-700">
-            10 giờ 00 ngày 29/04/2023
+            10 giờ 00 ngày 30/04/2023
           </p>
           <p class="event-invite text-lg font-extralight">Tư gia nhà trai</p>
         </div>
