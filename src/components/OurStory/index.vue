@@ -266,6 +266,27 @@
           src="@/assets/img/story/st-06-2022.png"
         />
       </div>
+      
+      <div
+      class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col" ref="story_5"
+    >
+      <div class="self-start p-6 animate__animated animate__pulse" v-if="animations[5]">
+        <p class="font-bold text-3xl text-rose-300">Bật mí chuyện "Xin vía"</p>
+        <p class="text-base font-light mt-1">
+          Tháng 5/2021,<br />
+          Chúng mình có tham dự tiệc cưới của một người bạn. Và...<br />
+          Nàng đã bắt được hoa cưới và trao cho chàng ❤️
+        </p>
+      </div>
+      <video
+        ref="video_vx_ref"
+        id="video-vx"
+        controls="true"
+        class="w-[320px] md:w-[640px] lg:w-[720px] h-auto self-center animate__animated animate__fadeInDown"
+        src="@/assets/videos/bat-hoa.mp4"
+         v-if="animations[5]"
+      />
+    </div>
     </div>
   </div>
 </template>
@@ -356,18 +377,18 @@ export default {
         this.animations[4] = false;
       }
 
-      // if (
-      //   this.$refs.story_5.getBoundingClientRect().top +
-      //     this.$refs.story_5.getBoundingClientRect().height <
-      //     window.innerHeight &&
-      //   scrollPosition - this.lastScrollY > 0
-      // ) {
-      //   this.animations[5] = true;
-      // } else if (
-      //   this.$refs.story_5.getBoundingClientRect().top > window.innerHeight
-      // ) {
-      //   this.animations[5] = false;
-      // }
+      if (
+        this.$refs.story_5.getBoundingClientRect().top +
+          this.$refs.story_5.getBoundingClientRect().height <
+          window.innerHeight &&
+        scrollPosition - this.lastScrollY > 0
+      ) {
+        this.animations[5] = true;
+      } else if (
+        this.$refs.story_5.getBoundingClientRect().top > window.innerHeight
+      ) {
+        this.animations[5] = false;
+      }
 
       // if (
       //   this.$refs.story_6.getBoundingClientRect().top +
