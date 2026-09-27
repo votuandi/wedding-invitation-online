@@ -4,7 +4,12 @@
   >
     <img
       class="absolute w-[300px] h-[381px] bottom-[-50px] -right-20"
-      src="@/assets/img/pattern/invitation-right-image.png"
+      src="@/assets/optimized/pattern/invitation-right-image.webp"
+      width="495"
+      height="629"
+      loading="lazy"
+      decoding="async"
+      alt="Họa tiết thiệp cưới"
     />
     <div
       class="calendar bg-[#fff3e015] rounded h-[540px] transition-[0.9s] w-full border-4 border-solid border-[#644d4d]"
@@ -109,10 +114,6 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Cookie&family=Dancing+Script&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 .container {
   position: relative;
   padding: 1.5rem;

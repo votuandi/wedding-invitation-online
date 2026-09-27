@@ -14,7 +14,9 @@
       <video
         ref="video_vx_ref"
         id="video-vx"
-        controls="true"
+        controls
+        preload="none"
+        poster="@/assets/optimized/avt.webp"
         class="w-[320px] md:w-[640px] lg:w-[720px] h-auto self-center animate__animated animate__fadeInDown"
         src="@/assets/videos/bat-hoa.mp4"
       />
@@ -24,7 +26,12 @@
     >
       <img
         class="w-[80vw] md:h-[60vh] md:w-auto mb-6 -mt-16"
-        src="@/assets/img/avt.png"
+        src="@/assets/optimized/avt.webp"
+        width="960"
+        height="904"
+        loading="lazy"
+        decoding="async"
+        alt="Tuấn Dĩ và Tuyết Minh"
       />
       <p class="thanks text-4xl lg:text-8xl text-center">
         Tuấn Dĩ & Tuyết Minh
@@ -43,8 +50,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-
 .thanks {
   font-family: "Great Vibes", cursive;
 }

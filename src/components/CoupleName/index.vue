@@ -3,28 +3,27 @@
     <p class="font-[normal] text-base lg:text-3xl">{{ groom }}</p>
     <i
       class="ti-heart text-rose-400 box-border leading-none font-normal text-base lg:text-2xl iheart mx-px"
+      aria-hidden="true"
     />
     <p class="font-[normal] text-base lg:text-3xl">{{ bride }}</p>
   </div>
 </template>
 
 <script>
+import { invitationConfig } from "@/features/invitation/data/invitationConfig";
+
 export default {
   name: "CoupleName",
   data() {
     return {
-      bride: "Tuyết Minh",
-      groom: "Tuấn Dĩ",
+      bride: invitationConfig.bride,
+      groom: invitationConfig.groom,
     };
   },
 };
 </script>
 
 <style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .ten-dau-re p {
   font-family: "Dancing Script", cursive;
 }

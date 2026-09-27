@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <main class="relative">
     <MainTitle />
     <NavigationBar @rollTo="rollTo" />
     <SpliderCustomer id="0" />
@@ -9,7 +9,7 @@
     <OurAlbum id="4" />
     <Congratulation id="5" />
     <TheEnd />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     rollTo(id) {
-      document.getElementById(id).scrollIntoView();
+      document.getElementById(id)?.scrollIntoView({ behavior: "auto" });
     },
   },
 };

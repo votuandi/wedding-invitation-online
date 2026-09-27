@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-full pt-10 items-center">
     <div class="flex flex-col items-center justify-start px-10 mb-10">
-      <img class="w-[126px]" src="@/assets/img/pattern/sec-title-flower.png" />
+<img class="w-[126px]" src="@/assets/optimized/pattern/sec-title-flower.webp" width="126" height="59" loading="lazy" decoding="async" alt="" />
       <p class="story-intro text-[24px] font-semibold">
         Câu chuyện tình yêu của chúng tôi
       </p>
@@ -13,31 +13,37 @@
       <div
         class="img-children relative flex flex-row justify-center h-[600px] items-end pb-5"
         ref="story_0"
+        data-story-index="0"
       >
         <img
           v-if="animations[0]"
           class="h-[500px] w-auto animate__animated animate__bounceInDown"
-          src="@/assets/img/story/chu-re-luc-nho.png"
+          src="@/assets/optimized/story/chu-re-luc-nho.webp"
+          loading="lazy" decoding="async" alt="Minh họa chú rể lúc nhỏ"
         />
         <img
           v-if="animations[0]"
           class="h-[450px] mb-5 w-auto animate__animated animate__bounceInDown"
-          src="@/assets/img/story/co-dau-luc-nho.png"
+          src="@/assets/optimized/story/co-dau-luc-nho.webp"
+          loading="lazy" decoding="async" alt="Minh họa cô dâu lúc nhỏ"
         />
         <img
           v-if="animations[0]"
           class="w-screen md:w-[700px] absolute bottom-0 mx-0 my-auto -z-10 animate__animated animate__rotateInUpLeft"
-          src="@/assets/img/story/bg-sen.png"
+          src="@/assets/optimized/story/bg-sen.webp"
+          loading="lazy" decoding="async" alt=""
         />
         <img
           v-if="animations[0]"
           class="absolute -z-10 w-[200px] top-0 right-5 md:right-[35vw] animate__animated animate__slideInRight"
-          src="@/assets/img/story/pt-birds.png"
+          src="@/assets/optimized/story/pt-birds.webp"
+          loading="lazy" decoding="async" alt=""
         />
         <img
           v-if="animations[0]"
           class="absolute -z-10 w-[100px] top-0 left-5 md:left-[35vw] animate__animated animate__slideInLeft"
-          src="@/assets/img/story/pt-sun.png"
+          src="@/assets/optimized/story/pt-sun.webp"
+          loading="lazy" decoding="async" alt=""
         />
       </div>
       <div
@@ -53,6 +59,7 @@
       <div
         class="img-children relative justify-center h-[380px] md:h-[720px] w-screen md:w-[600px] items-end pb-5 self-center"
         ref="story_1"
+        data-story-index="1"
       >
         <div
           class="flex flex-row absolute w-screen md:w-[600px] justify-evenly px-3"
@@ -60,12 +67,14 @@
           <img
             v-if="animations[1]"
             class="w-[40vw] md:w-[300px] h-auto animate__animated animate__fadeInLeftBig"
-            src="@/assets/img/story/pt-story-2vk.png"
+            src="@/assets/optimized/story/pt-story-2vk.webp"
+            loading="lazy" decoding="async" alt=""
           />
           <img
             v-if="animations[1]"
             class="w-[40vw] md:w-[300px] h-auto animate__animated animate__fadeInRightBig"
-            src="@/assets/img/story/pt-story-2ck.png"
+            src="@/assets/optimized/story/pt-story-2ck.webp"
+            loading="lazy" decoding="async" alt=""
           />
         </div>
       </div>
@@ -82,6 +91,7 @@
       <div
         class="img-children relative justify-center h-[500px] md:h-[640px] py-2 w-screen md:w-[600px] items-end pb-5 self-center"
         ref="story_2"
+        data-story-index="2"
       >
         <div
           class="flex flex-row absolute bottom-[280px] w-screen md:w-[600px] justify-between"
@@ -89,18 +99,21 @@
           <img
             v-if="animations[2]"
             class="w-[150px] md:w-[300px] h-auto -z-10 animate__animated animate__fadeInLeftBig"
-            src="@/assets/img/story/pt-boy.png"
+            src="@/assets/optimized/story/pt-boy.webp"
+            loading="lazy" decoding="async" alt=""
           />
           <img
             v-if="animations[2]"
             class="w-[150px] md:w-[300px] h-auto -z-10 animate__animated animate__fadeInRightBig"
-            src="@/assets/img/story/pt-girl.png"
+            src="@/assets/optimized/story/pt-girl.webp"
+            loading="lazy" decoding="async" alt=""
           />
         </div>
         <img
           v-if="animations[2]"
           class="h-[300px] absolute bottom-0 mx-0 my-auto animate__animated animate__bounceInUp"
-          src="@/assets/img/story/pt-table.png"
+          src="@/assets/optimized/story/pt-table.webp"
+          loading="lazy" decoding="async" alt=""
         />
         <div
           class="absolute bottom-[200px] z-10 mx-0 my-auto w-screen md:w-[600px] flex justify-center"
@@ -108,7 +121,8 @@
           <img
             v-if="animations[2]"
             class="h-[150px] animate__animated animate__bounceInDown"
-            src="@/assets/img/story/pt-bunbo.png"
+            src="@/assets/optimized/story/pt-bunbo.webp"
+            loading="lazy" decoding="async" alt=""
           />
         </div>
       </div>
@@ -125,6 +139,7 @@
       <div
         class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_3"
+        data-story-index="3"
       >
         <div
           class="self-start p-6 animate__animated animate__pulse"
@@ -138,13 +153,15 @@
         <img
           class="w-[320px] h-auto self-center animate__animated animate__fadeInDown"
           v-if="animations[3]"
-          src="@/assets/img/story/st-10-03-2020.png"
+          src="@/assets/optimized/story/st-10-03-2020.webp"
+          loading="lazy" decoding="async" alt="Kỷ niệm tháng 3 năm 2020"
         />
       </div>
 
       <!-- <div
         class="img-children relative justify-center h-fit py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_4"
+        data-story-index="4"
       >
         <div
           class="self-start p-6 animate__animated animate__pulse"
@@ -161,7 +178,8 @@
         <img
           class="w-[320px] h-auto self-center animate__animated animate__fadeInDown"
           v-if="animations[4]"
-          src="@/assets/img/story/st-10-2020.png"
+          src="@/assets/optimized/story/st-10-2020.webp"
+          loading="lazy" decoding="async" alt="Kỷ niệm tháng 10 năm 2020"
         />
       </div>
 
@@ -185,19 +203,23 @@
         >
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2021.png"
+            src="@/assets/optimized/story/st-2021.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2021"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2021-1.png"
+            src="@/assets/optimized/story/st-2021-1.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2021"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2021-2.png"
+            src="@/assets/optimized/story/st-2021-2.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2021"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2021-3.png"
+            src="@/assets/optimized/story/st-2021-3.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2021"
           />
         </div>
       </div>
@@ -223,19 +245,23 @@
         >
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2022.png"
+            src="@/assets/optimized/story/st-2022.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2022"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2022-1.png"
+            src="@/assets/optimized/story/st-2022-1.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2022"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2022-2.png"
+            src="@/assets/optimized/story/st-2022-2.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2022"
           />
           <img
             class="h-[180px] w-auto self-center m-1"
-            src="@/assets/img/story/st-2022-3.png"
+            src="@/assets/optimized/story/st-2022-3.webp"
+            loading="lazy" decoding="async" alt="Kỷ niệm năm 2022"
           />
         </div>
       </div> -->
@@ -243,6 +269,7 @@
       <div
         class="cau-hon img-children relative justify-center h-[100vh] py-2 w-screen md:w-[600px] items-center pb-5 self-center flex flex-col"
         ref="story_4"
+        data-story-index="4"
       >
         <div
           class="self-start p-6 animate__animated animate__pulse mb-[20px]"
@@ -263,7 +290,8 @@
         <img
           class="w-[80vw] h-auto self-center animate__animated animate__fadeInDown"
           v-if="animations[4]"
-          src="@/assets/img/story/st-06-2022.png"
+          src="@/assets/optimized/story/st-06-2022.webp"
+          loading="lazy" decoding="async" alt="Kỷ niệm tháng 6 năm 2022"
         />
       </div>
     </div>
@@ -274,12 +302,26 @@
 export default {
   name: "OurStory",
   mounted() {
-    window.addEventListener("scroll", this.updateScaroll);
+    this.lastScrollY = window.scrollY;
+    if ("IntersectionObserver" in window) {
+      this.storyObserver = new IntersectionObserver(this.handleIntersection, {
+        rootMargin: "0px 0px -25% 0px",
+      });
+      Object.values(this.$refs).forEach((element) => this.storyObserver.observe(element));
+    } else {
+      window.addEventListener("scroll", this.updateScaroll, { passive: true });
+      this.updateScaroll();
+    }
+  },
+  beforeUnmount() {
+    if (this.storyObserver) this.storyObserver.disconnect();
+    window.removeEventListener("scroll", this.updateScaroll);
   },
 
   data() {
     return {
       lastScrollY: 0,
+      storyObserver: null,
       animations: [
         false,
         false,
@@ -294,67 +336,25 @@ export default {
     };
   },
   methods: {
+    handleIntersection(entries) {
+      entries.forEach((entry) => {
+        const index = Number(entry.target.dataset.storyIndex);
+        if (entry.isIntersecting && window.scrollY > this.lastScrollY) {
+          this.animations[index] = true;
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top > entry.rootBounds.bottom) {
+          this.animations[index] = false;
+        }
+      });
+      this.lastScrollY = window.scrollY;
+    },
     updateScaroll() {
       const scrollPosition = window.scrollY;
-      if (
-        this.$refs.story_0.getBoundingClientRect().top  <
-          window.innerHeight*0.75 &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[0] = true;
-      } else if (
-        this.$refs.story_0.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[0] = false;
-      }
-
-      if (
-        this.$refs.story_1.getBoundingClientRect().top <
-          window.innerHeight*0.75 &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[1] = true;
-      } else if (
-        this.$refs.story_1.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[1] = false;
-      }
-
-      if (
-        this.$refs.story_2.getBoundingClientRect().top <
-          window.innerHeight*0.75 &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[2] = true;
-      } else if (
-        this.$refs.story_2.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[2] = false;
-      }
-
-      if (
-        this.$refs.story_3.getBoundingClientRect().top <
-          window.innerHeight*0.75 &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[3] = true;
-      } else if (
-        this.$refs.story_3.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[3] = false;
-      }
-
-      if (
-        this.$refs.story_4.getBoundingClientRect().top <
-          window.innerHeight*0.75 &&
-        scrollPosition - this.lastScrollY > 0
-      ) {
-        this.animations[4] = true;
-      } else if (
-        this.$refs.story_4.getBoundingClientRect().top > window.innerHeight
-      ) {
-        this.animations[4] = false;
-      }
+      Object.values(this.$refs).forEach((element, index) => {
+        const top = element.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.75 && scrollPosition - this.lastScrollY > 0) this.animations[index] = true;
+        else if (top > window.innerHeight) this.animations[index] = false;
+      });
+      this.lastScrollY = scrollPosition;
 
       // if (
       //   this.$refs.story_5.getBoundingClientRect().top +
@@ -413,16 +413,11 @@ export default {
 </script>
 
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import "animate.css";
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .story-intro {
   font-family: "Dancing Script", cursive;
 }
 
 .cau-hon {
-  background-image: url("@/assets/img/story/bg-cauhon.png");
+  background-image: url("@/assets/optimized/story/bg-cauhon.webp");
 }
 </style>

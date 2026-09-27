@@ -8,7 +8,12 @@
       >
         <img
           class="absolute w-[300px] h-[381px] bottom-[-50px] -left-40 -top-20"
-          src="@/assets/img/pattern/invitation-left-img.png"
+          src="@/assets/optimized/pattern/invitation-left-img.webp"
+          width="293"
+          height="549"
+          loading="lazy"
+          decoding="async"
+          alt="Họa tiết thiệp cưới"
         />
         <div
           class="save-the-date text-center bg-[#fff3e015] rounded h-fit lg:h-[540px] transition-[0.9s] w-full border-4 border-solid border-[#644d4d] flex items-center"
@@ -31,6 +36,8 @@
             <button
               class="bg-[#b38888] flex flex-row items-center justify-center min-w-40 h-12 px-3"
               @click="$emit('rollTo')"
+              type="button"
+              aria-label="Đi đến phần xác nhận tham dự"
             >
               <span class="text-white mr-2 text-base font-bold"
                 >Xác nhận tham dự</span
@@ -38,6 +45,8 @@
               <img
                 class="w-5 h-5 btn-white"
                 src="@/assets/icons/arrow-right-alt-svgrepo-com.svg"
+                alt=""
+                aria-hidden="true"
               />
             </button>
           </div>
@@ -59,11 +68,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Great+Vibes&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .save-the-date {
   @media (max-width: 1000px) {
     width: 80vw;

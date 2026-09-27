@@ -5,71 +5,30 @@
     <header :class="{ 'scrolled-nav': scrollNav }">
       <nav>
         <ul v-show="!mobile" class="navigation">
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 0)"
-          >
-            <span>Trang chủ</span>
-          </li>
-          <!-- <li @mouseover="showProductsMenu" @mouseleave="hideProductsMenu"> -->
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 1)"
-          >
-            <span>Ngày cưới</span>
-          </li>
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 2)"
-          >
-            <span>Cô dâu Chú rể</span>
-          </li>
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 3)"
-          >
-            <span>Sự kiện cưới</span>
-          </li>
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 4)"
-          >
-            <span>Album cưới</span>
-          </li>
-          <li
-            class="text-[#b58887] w-full cursor-pointer"
-            @click="$emit('rollTo', 5)"
-          >
-            <span>Xác nhận tham dự</span>
+          <li v-for="item in navigationItems" :key="item.id" class="text-[#b58887] w-full">
+            <a class="nav-link" :href="`#${item.id}`" @click.prevent="navigate(item.id)">{{ item.label }}</a>
           </li>
         </ul>
         <div class="icon">
-          <i
-            class="ti-menu"
+          <button
+            type="button"
+            class="menu-toggle"
             @click="toggleMobileNav"
             v-show="mobile"
             :class="{ 'icon-active': mobileNav }"
-          />
+            :aria-expanded="mobileNav"
+            aria-controls="mobile-navigation"
+            aria-label="Mở hoặc đóng menu điều hướng"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
         </div>
         <transition>
-          <ul v-show="mobileNav" class="dropdown-nav">
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 0)">
-              <span>Trang chủ</span>
-            </li>
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 1)">
-              <span>Ngày cưới</span>
-            </li>
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 2)">
-              <span>Cô dâu Chú rể</span>
-            </li>
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 3)">
-              <span>Sự kiện cưới</span>
-            </li>
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 4)">
-              <span>Album cưới</span>
-            </li>
-            <li class="text-[#b58887] w-full p-4" @click="$emit('rollTo', 5)">
-              <span>Xác nhận tham dự</span>
+          <ul v-show="mobileNav" id="mobile-navigation" class="dropdown-nav">
+            <li v-for="item in navigationItems" :key="item.id" class="text-[#b58887] w-full p-4">
+              <a class="nav-link" :href="`#${item.id}`" @click.prevent="navigate(item.id, true)">{{ item.label }}</a>
             </li>
           </ul>
         </transition>
@@ -78,7 +37,9 @@
   </div>
 </template>
    
-  <script>
+<script>
+import { navigationItems } from "@/features/invitation/data/invitationConfig";
+
 export default {
   name: "CpnNavigation",
   created() {
@@ -88,6 +49,10 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.updateScaroll);
   },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.checkScreen);
+    window.removeEventListener("scroll", this.updateScaroll);
+  },
   data() {
     return {
       lastScrollY: 0,
@@ -95,14 +60,11 @@ export default {
       mobile: null,
       mobileNav: null,
       windowWidth: null,
-      productsMenu: null,
-      servicesMenu: null,
+      navigationItems,
     };
   },
   methods: {
-    goHome() {
-      this.$router.push({ name: "Home" });
-    },
+    navigate(id, closeMenu = false) { this.$emit("rollTo", id); if (closeMenu) this.onHideNavMobile(); },
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },
@@ -113,8 +75,6 @@ export default {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 750) {
         this.mobile = true;
-        this.productsMenu = false;
-        this.servicesMenu = false;
         return;
       }
       this.mobile = false;
@@ -131,31 +91,11 @@ export default {
       this.scrollNav = false;
       this.lastScrollY = scrollPosition;
     },
-    showServiecesMenu() {
-      this.servicesMenu = true;
-      this.scrollNav = true;
-    },
-    hideServiecesMenu() {
-      this.servicesMenu = false;
-      this.scrollNav = false;
-    },
-    showProductsMenu() {
-      this.productsMenu = true;
-      this.scrollNav = true;
-    },
-    hideProductsMenu() {
-      this.productsMenu = false;
-      this.scrollNav = false;
-    },
   },
 };
 </script>
   
-  <style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+<style scoped>
 .navbar {
   font-family: "Itim", cursive;
 }
@@ -233,13 +173,22 @@ export default {
   right: 24px;
   height: 100%;
 }
-.navbar header nav .icon i {
+.navbar header nav .icon .menu-toggle {
   cursor: pointer;
-  font-size: 24px;
   transition: 0.8s ease all;
   color: #fff;
   background-color: #eebbb9;
   padding: 0.25rem;
+  border: 0;
+  line-height: 0;
+}
+.navbar header nav .icon .menu-toggle svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
 }
 .navbar header nav .icon-active {
   transform: rotate(180deg);

@@ -1,12 +1,12 @@
 <template>
-  <div
+  <header
     class="content-center bg-white py-8 main-title flex flex-col items-center"
   >
     <div>
       <CoupleName class="couple-name" />
     </div>
     <span class="text-xs">Just Married</span>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -20,10 +20,6 @@ export default {
 </script>
 
 <style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script&display=swap");
 .main-title {
   height: fit-content;
 }

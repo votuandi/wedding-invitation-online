@@ -1,0 +1,19 @@
+@import "animate.css";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Cookie&family=Dancing+Script&family=Great+Vibes&family=Itim&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
